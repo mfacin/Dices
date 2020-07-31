@@ -1,22 +1,24 @@
 {
-  "name": "electron-quick-start",
+  "name": "dices",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
-  "main": "main.js",
+  "description": "A simple dice application",
+  "main": "src/main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dev": "nodemon --watch . --exec \"electron .\""
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "Dices",
+    "Dice"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Matheus Facin",
+  "license": "MIT",
   "devDependencies": {
-    "electron": "^9.0.5"
+    "electron": "^9.0.5",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
   }
 }

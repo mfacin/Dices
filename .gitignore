@@ -1,1 +1,5 @@
 node_modules
+.env
+.lock
+.log
+.lock

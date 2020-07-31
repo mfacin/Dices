@@ -1,0 +1,124 @@
+:root {
+  --green:  rgb(37, 150, 71);
+  --red:    rgb(209, 45, 45);
+  --yellow: rgb(255, 240, 32);
+  --white:  rgb(241, 249, 255);
+}
+
+* {
+  outline: none;
+}
+
+.dices {
+  width: 100%;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.dice-group {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+
+  margin: 20px;
+  padding: 15px;
+  border-radius: 5px;
+
+  box-sizing: content-box;
+
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dice-info {
+  width: 100px;
+  text-align: center;
+}
+
+.dice-info button {
+  background: none;
+  border: none;
+
+  color: #fff;
+  font-family: 'carimbo', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.dice-info button:hover {
+  color: rgb(202, 202, 202);
+  cursor: pointer;
+}
+
+.dice {
+  width: 100px;
+  height: 100px;
+  position: relative;
+
+  /* border: 3px solid rgb(23, 97, 209); */
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--white);
+
+  transition: .3s;
+}
+
+.dice span {
+  font-size: 45px;
+  font-family: 'carimbo', Arial, Helvetica, sans-serif;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 1;
+  opacity: 1;
+
+  transition: .3s;
+}
+
+.dice span:nth-child(2) {
+  opacity: 0;
+  z-index: 0;
+
+  font-size: 25px;
+}
+
+.dice:hover {
+  cursor: pointer;
+}
+
+.dice:hover span:nth-child(1) {
+  opacity: 0;
+  z-index: 0;
+}
+
+.dice:hover span:nth-child(2) {
+  opacity: 1;
+  z-index: 1;
+}
+
+.dice.rolling {
+  background-color: var(--yellow);
+}
+
+.dice.waiting {
+  background-color: var(--red);
+}
+
+.dice.waiting span {
+  opacity: 0;
+}
+
+.dice.finished {
+  background-color: var(--green);
+}
+
+.dice.finished span {
+  color: #fff;
+}

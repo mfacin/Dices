@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+
+  /* background-color: rgb(61, 35, 23); */
+  background-image: url('./assets/leather.jpg');
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  align-items: center;
+
+  font-family: roboto, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: 'carimbo', Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  font-weight: normal;
+
+  margin: 15px 0;
+  color: #fff;
+}
+
+h2 {
+  text-align: center;
+  margin: 10px 0;
+  color: #fff;
+}
+
+label {
+  color: #fff;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+label a {
+  text-decoration: none;
+  color: rgb(83, 163, 255);
+  font-weight: bold;
+  margin-left: 5px;
+}
